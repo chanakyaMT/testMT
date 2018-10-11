@@ -6,135 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory Name",
 			"defaultValue": "testdemoadfv2"
-		},
-		"integrationRuntime_integrationRuntimeCheckStorageFirewall": {
-			"type": "string",
-			"metadata": "Integration Runtime Name",
-			"defaultValue": "integrationRuntimeCheckStorageFirewall"
-		},
-		"AzureBlobStorageJohnSinks_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageJohnSinks'"
-		},
-		"AzureBlobStorageLinkedS_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageLinkedS'"
-		},
-		"AzureBlobStorageLinkedService_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageLinkedService'"
-		},
-		"AzureBlobStorageSource_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageSource'"
-		},
-		"AzureBlobStoragejohn_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStoragejohn'"
-		},
-		"AzureBlobStoragesink_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStoragesink'"
-		},
-		"AzureBlobStoragesinksadsa_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStoragesinksadsa'"
-		},
-		"AzureSqlDatabaseLinkedService_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedService'"
-		},
-		"AzureSqlDatabaseLinkedServiceADLS_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedServiceADLS'"
-		},
-		"AzureSqlDatabaseSource_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseSource'"
-		},
-		"AzureSqlDatabaseSourceLinkedService_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseSourceLinkedService'"
-		},
-		"AzureStorageLinkedService_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
-		},
-		"CosmosDbLinkedService_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'CosmosDbLinkedService'"
-		},
-		"CosmosDbLinkedService1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'CosmosDbLinkedService1'"
-		},
-		"CosmosDbMongoDbApi1_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'CosmosDbMongoDbApi1'"
-		},
-		"MongoDbLinkedService_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'MongoDbLinkedService'"
-		},
-		"MongoDbNative32_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'MongoDbNative32'"
-		},
-		"AzureBlobJohn_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "@{pipeline().parameters.filename}"
-		},
-		"AzureBlobJohn_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "adftutorial"
-		},
-		"AzureBlobJohnSinkk_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"AzureBlobJohnSinkk_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "test"
-		},
-		"AzureBlobSink_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "test1"
-		},
-		"AzureBlobSink_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "adftutorial"
-		},
-		"AzureBlobsourcenew_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "testone.txt"
-		},
-		"AzureBlobsourcenew_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "source"
-		},
-		"DestinationDataset_2k0_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": ""
-		},
-		"DestinationDataset_2k0_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "adftutorial"
-		},
-		"SinkDataset_properties_typeProperties_fileName": {
-			"type": "string",
-			"defaultValue": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
-		},
-		"SinkDataset_properties_typeProperties_folderPath": {
-			"type": "string",
-			"defaultValue": "adftutorial"
-		},
-		"MongoDbLinkedService_properties_typeProperties_username": {
-			"type": "string",
-			"defaultValue": "testmongopg"
-		},
-		"PraveenTrigger_properties_pipeline1_parameters_filename": {
-			"type": "string",
-			"defaultValue": "@if(equals(int(formatDateTime(utcnow(), 'MM')),01), sub(int(formatDateTime(utcnow(), 'yyyyMM')),89),sub(int(formatDateTime(utcnow(),'yyyyMM')),1))"
 		}
 	},
 	"variables": {
@@ -150,7 +21,6 @@
 					{
 						"name": "CosmosToBlob",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -158,7 +28,6 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"source": {
 								"type": "MongoDbV2Source",
@@ -175,20 +44,17 @@
 						"inputs": [
 							{
 								"referenceName": "MongoDbV2Collection2",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "AzureBlobSink",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/MongoDbV2Collection2')]",
@@ -204,7 +70,6 @@
 					{
 						"name": "Copy_2k0",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -236,22 +101,19 @@
 						"inputs": [
 							{
 								"referenceName": "AzureBlobsourcenew",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "DestinationDataset_2k0",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					},
 					{
 						"name": "Copy Data1",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -259,7 +121,6 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"source": {
 								"type": "SqlSource"
@@ -280,20 +141,17 @@
 						"inputs": [
 							{
 								"referenceName": "AzureSqlTable1",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "AzureBlobsourcenew",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/AzureBlobsourcenew')]",
@@ -310,7 +168,6 @@
 					{
 						"name": "LookupOldWaterMarkActivity",
 						"type": "Lookup",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -318,22 +175,19 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"source": {
 								"type": "SqlSource"
 							},
 							"dataset": {
 								"referenceName": "WatermarkDataset",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						}
 					},
 					{
 						"name": "LookupNewWaterMarkActivity",
 						"type": "Lookup",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -341,7 +195,6 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"source": {
 								"type": "SqlSource",
@@ -349,8 +202,7 @@
 							},
 							"dataset": {
 								"referenceName": "SourceDataset",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						}
 					},
@@ -378,7 +230,6 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"source": {
 								"type": "SqlSource",
@@ -396,15 +247,13 @@
 						"inputs": [
 							{
 								"referenceName": "SourceDataset",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "SinkDataset",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					},
@@ -426,7 +275,6 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"storedProcedureName": "[concat('[', 'dbo].[sp_write_watermark]')]",
 							"storedProcedureParameters": {
@@ -451,14 +299,12 @@
 							"type": "LinkedServiceReference"
 						}
 					}
-				],
-				"annotations": []
+				]
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/WatermarkDataset')]",
 				"[concat(variables('factoryId'), '/datasets/SourceDataset')]",
-				"[concat(variables('factoryId'), '/datasets/SinkDataset')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabaseLinkedService')]"
+				"[concat(variables('factoryId'), '/datasets/SinkDataset')]"
 			]
 		},
 		{
@@ -470,7 +316,6 @@
 					{
 						"name": "Copy Data1",
 						"type": "Copy",
-						"dependsOn": [],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -478,7 +323,6 @@
 							"secureOutput": false,
 							"secureInput": false
 						},
-						"userProperties": [],
 						"typeProperties": {
 							"source": {
 								"type": "BlobSource",
@@ -493,15 +337,13 @@
 						"inputs": [
 							{
 								"referenceName": "AzureBlobJohn",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						],
 						"outputs": [
 							{
 								"referenceName": "AzureBlobJohnSinkk",
-								"type": "DatasetReference",
-								"parameters": {}
+								"type": "DatasetReference"
 							}
 						]
 					}
@@ -511,8 +353,7 @@
 						"type": "String",
 						"defaultValue": "201806"
 					}
-				},
-				"annotations": []
+				}
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/AzureBlobJohn')]",
@@ -528,7 +369,6 @@
 					"referenceName": "AzureBlobStoragejohn",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"structure": [
 					{
@@ -555,15 +395,12 @@
 						"firstRowAsHeader": false
 					},
 					"fileName": {
-						"value": "[parameters('AzureBlobJohn_properties_typeProperties_fileName')]",
+						"value": "@{pipeline().parameters.filename}",
 						"type": "Expression"
 					},
-					"folderPath": "[parameters('AzureBlobJohn_properties_typeProperties_folderPath')]"
+					"folderPath": "adftutorial"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStoragejohn')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureBlobJohnSinkk')]",
@@ -574,7 +411,6 @@
 					"referenceName": "AzureBlobStorageJohnSinks",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
 					"format": {
@@ -586,13 +422,10 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"fileName": "[parameters('AzureBlobJohnSinkk_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('AzureBlobJohnSinkk_properties_typeProperties_folderPath')]"
+					"fileName": "",
+					"folderPath": "test"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorageJohnSinks')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureBlobSink')]",
@@ -603,7 +436,6 @@
 					"referenceName": "AzureBlobStorageLinkedService",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
 					"format": {
@@ -676,13 +508,10 @@
 							"id": "$.['id']"
 						}
 					},
-					"fileName": "[parameters('AzureBlobSink_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('AzureBlobSink_properties_typeProperties_folderPath')]"
+					"fileName": "test1",
+					"folderPath": "adftutorial"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorageLinkedService')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureBlobsourcenew')]",
@@ -693,7 +522,6 @@
 					"referenceName": "AzureBlobStorageSource",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
 					"format": {
@@ -705,13 +533,10 @@
 						"skipLineCount": 0,
 						"firstRowAsHeader": false
 					},
-					"fileName": "[parameters('AzureBlobsourcenew_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('AzureBlobsourcenew_properties_typeProperties_folderPath')]"
+					"fileName": "testone.txt",
+					"folderPath": "source"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorageSource')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureSqlTable1')]",
@@ -722,7 +547,6 @@
 					"referenceName": "AzureSqlDatabaseSource",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlTable",
 				"structure": [
 					{
@@ -741,10 +565,7 @@
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[emp]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabaseSource')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/CosmosDbMongoDbApiCollection1')]",
@@ -755,15 +576,11 @@
 					"referenceName": "CosmosDbMongoDbApi1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "CosmosDbMongoDbApiCollection",
 				"typeProperties": {
 					"collection": "NewCollection"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CosmosDbMongoDbApi1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DestinationDataset_2k0')]",
@@ -774,7 +591,6 @@
 					"referenceName": "AzureBlobStoragesink",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"structure": [
 					{
@@ -787,13 +603,10 @@
 					}
 				],
 				"typeProperties": {
-					"fileName": "[parameters('DestinationDataset_2k0_properties_typeProperties_fileName')]",
-					"folderPath": "[parameters('DestinationDataset_2k0_properties_typeProperties_folderPath')]"
+					"fileName": "",
+					"folderPath": "adftutorial"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStoragesink')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DocumentDbCollection1')]",
@@ -804,15 +617,11 @@
 					"referenceName": "CosmosDbLinkedService1",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "DocumentDbCollection",
 				"typeProperties": {
 					"collectionName": "CollectionNew"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/CosmosDbLinkedService1')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/MongoDbCollection1')]",
@@ -823,15 +632,11 @@
 					"referenceName": "MongoDbLinkedService",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "MongoDbCollection",
 				"typeProperties": {
 					"collectionName": "\"NewCollection\""
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/MongoDbLinkedService')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/MongoDbV2Collection1')]",
@@ -842,15 +647,11 @@
 					"referenceName": "MongoDbNative32",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "MongoDbV2Collection",
 				"typeProperties": {
 					"collection": "NewCollection"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/MongoDbNative32')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/MongoDbV2Collection2')]",
@@ -861,15 +662,11 @@
 					"referenceName": "MongoDbNative32",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "MongoDbV2Collection",
 				"typeProperties": {
 					"collection": "NewCollection"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/MongoDbNative32')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SinkDataset')]",
@@ -880,7 +677,6 @@
 					"referenceName": "AzureStorageLinkedService",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureBlob",
 				"typeProperties": {
 					"format": {
@@ -893,15 +689,12 @@
 						"firstRowAsHeader": false
 					},
 					"fileName": {
-						"value": "[parameters('SinkDataset_properties_typeProperties_fileName')]",
+						"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')",
 						"type": "Expression"
 					},
-					"folderPath": "[parameters('SinkDataset_properties_typeProperties_folderPath')]"
+					"folderPath": "adftutorial"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureStorageLinkedService')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/SourceDataset')]",
@@ -912,15 +705,11 @@
 					"referenceName": "AzureSqlDatabaseLinkedService",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[data_source_table]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabaseLinkedService')]"
-			]
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/WatermarkDataset')]",
@@ -931,259 +720,17 @@
 					"referenceName": "AzureSqlDatabaseLinkedService",
 					"type": "LinkedServiceReference"
 				},
-				"annotations": [],
 				"type": "AzureSqlTable",
 				"typeProperties": {
 					"tableName": "[concat('[', 'dbo].[watermarktable]')]"
 				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabaseLinkedService')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageJohnSinks')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStorageJohnSinks_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageLinkedS')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStorageLinkedS_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageLinkedService')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStorageLinkedService_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStorageSource')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStorageSource_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStoragejohn')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStoragejohn_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStoragesink')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStoragesink_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobStoragesinksadsa')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureBlobStoragesinksadsa_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseLinkedService')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureSqlDatabaseLinkedService_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseLinkedServiceADLS')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureSqlDatabaseLinkedServiceADLS_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseSource')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureSqlDatabaseSource_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabaseSourceLinkedService')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureSqlDatabaseSourceLinkedService_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureStorageLinkedService')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('AzureStorageLinkedService_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/CosmosDbLinkedService')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "CosmosDb",
-				"typeProperties": {
-					"connectionString": "[parameters('CosmosDbLinkedService_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/CosmosDbLinkedService1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "CosmosDb",
-				"typeProperties": {
-					"connectionString": "[parameters('CosmosDbLinkedService1_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/CosmosDbMongoDbApi1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "CosmosDbMongoDbApi",
-				"typeProperties": {
-					"connectionString": {
-						"type": "SecureString",
-						"value": "[parameters('CosmosDbMongoDbApi1_connectionString')]"
-					},
-					"database": "DatabaseNew"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/MongoDbLinkedService')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "MongoDb",
-				"typeProperties": {
-					"server": "testmongopg.documents.azure.com",
-					"port": "10255",
-					"databaseName": "DatabaseNew",
-					"authenticationType": "Basic",
-					"username": "[parameters('MongoDbLinkedService_properties_typeProperties_username')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('MongoDbLinkedService_password')]"
-					},
-					"authSource": "admin",
-					"enableSsl": true,
-					"allowSelfSignedServerCert": true
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/MongoDbNative32')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "MongoDbV2",
-				"typeProperties": {
-					"connectionString": "[parameters('MongoDbNative32_connectionString')]",
-					"database": "DatabaseNew"
-				}
-			},
-			"dependsOn": []
+			}
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/PraveenTrigger')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"annotations": [],
 				"runtimeState": "Started",
 				"pipelines": [
 					{
@@ -1192,7 +739,7 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {
-							"filename": "[parameters('PraveenTrigger_properties_pipeline1_parameters_filename')]"
+							"filename": "@if(equals(int(formatDateTime(utcnow(), 'MM')),01), sub(int(formatDateTime(utcnow(), 'yyyyMM')),89),sub(int(formatDateTime(utcnow(),'yyyyMM')),1))"
 						}
 					}
 				],
@@ -1226,14 +773,12 @@
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"annotations": [],
 				"runtimeState": "Stopped",
 				"pipeline": {
 					"pipelineReference": {
 						"referenceName": "pipeline1",
 						"type": "PipelineReference"
-					},
-					"parameters": {}
+					}
 				},
 				"type": "TumblingWindowTrigger",
 				"typeProperties": {
@@ -1250,16 +795,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/pipelines/pipeline1')]"
 			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/', parameters('integrationRuntime_integrationRuntimeCheckStorageFirewall'))]",
-			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "SelfHosted",
-				"typeProperties": {}
-			},
-			"dependsOn": []
 		}
 	]
 }

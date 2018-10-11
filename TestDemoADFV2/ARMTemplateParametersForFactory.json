@@ -1,1 +1,105 @@
-{}
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "testdemoadfv2"
+		},
+		"integrationRuntime_integrationRuntimeCheckStorageFirewall": {
+			"value": "integrationRuntimeCheckStorageFirewall"
+		},
+		"AzureBlobStorageJohnSinks_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageLinkedS_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageSource_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStoragejohn_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStoragesink_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStoragesinksadsa_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinkedServiceADLS_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseSource_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseSourceLinkedService_connectionString": {
+			"value": ""
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"CosmosDbLinkedService_connectionString": {
+			"value": ""
+		},
+		"CosmosDbLinkedService1_connectionString": {
+			"value": ""
+		},
+		"CosmosDbMongoDbApi1_connectionString": {
+			"value": ""
+		},
+		"MongoDbLinkedService_password": {
+			"value": ""
+		},
+		"MongoDbNative32_connectionString": {
+			"value": ""
+		},
+		"AzureBlobJohn_properties_typeProperties_fileName": {
+			"value": "@{pipeline().parameters.filename}"
+		},
+		"AzureBlobJohn_properties_typeProperties_folderPath": {
+			"value": "adftutorial"
+		},
+		"AzureBlobJohnSinkk_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureBlobJohnSinkk_properties_typeProperties_folderPath": {
+			"value": "test"
+		},
+		"AzureBlobSink_properties_typeProperties_fileName": {
+			"value": "test1"
+		},
+		"AzureBlobSink_properties_typeProperties_folderPath": {
+			"value": "adftutorial"
+		},
+		"AzureBlobsourcenew_properties_typeProperties_fileName": {
+			"value": "testone.txt"
+		},
+		"AzureBlobsourcenew_properties_typeProperties_folderPath": {
+			"value": "source"
+		},
+		"DestinationDataset_2k0_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"DestinationDataset_2k0_properties_typeProperties_folderPath": {
+			"value": "adftutorial"
+		},
+		"SinkDataset_properties_typeProperties_fileName": {
+			"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')"
+		},
+		"SinkDataset_properties_typeProperties_folderPath": {
+			"value": "adftutorial"
+		},
+		"MongoDbLinkedService_properties_typeProperties_username": {
+			"value": "testmongopg"
+		},
+		"PraveenTrigger_properties_pipeline1_parameters_filename": {
+			"value": "@if(equals(int(formatDateTime(utcnow(), 'MM')),01), sub(int(formatDateTime(utcnow(), 'yyyyMM')),89),sub(int(formatDateTime(utcnow(),'yyyyMM')),1))"
+		}
+	}
+}
