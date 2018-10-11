@@ -1,0 +1,25 @@
+{
+	"name": "DestinationDataset_2k0",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStoragesink",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "Prop_1",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "adftutorial"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
