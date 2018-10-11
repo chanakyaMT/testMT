@@ -1,0 +1,14 @@
+{
+	"name": "MongoDbCollection1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MongoDbLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"type": "MongoDbCollection",
+		"typeProperties": {
+			"collectionName": "\"NewCollection\""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

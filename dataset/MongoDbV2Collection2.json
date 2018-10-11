@@ -1,0 +1,14 @@
+{
+	"name": "MongoDbV2Collection2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MongoDbNative32",
+			"type": "LinkedServiceReference"
+		},
+		"type": "MongoDbV2Collection",
+		"typeProperties": {
+			"collection": "NewCollection"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
