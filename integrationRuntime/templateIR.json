@@ -1,0 +1,6 @@
+{
+	"name": "templateIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
