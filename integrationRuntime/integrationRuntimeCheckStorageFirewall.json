@@ -1,6 +1,0 @@
-{
-	"name": "integrationRuntimeCheckStorageFirewall",
-	"properties": {
-		"type": "SelfHosted"
-	}
-}
