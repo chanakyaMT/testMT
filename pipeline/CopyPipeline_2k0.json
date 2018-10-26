@@ -86,7 +86,12 @@
 					}
 				]
 			}
-		]
+		],
+		"parameters": {
+			"Path": {
+				"type": "Object"
+			}
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }
