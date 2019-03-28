@@ -1,0 +1,22 @@
+{
+	"name": "AzureDataLakeStore3",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://dlsg123.azuredatalakestore.net/webhdfs/v1",
+			"servicePrincipalId": "3b1eea87-e169-4455-b991-e6806febf4bb",
+			"servicePrincipalKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "dlsg1"
+			},
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"subscriptionId": "3b1eea87-e169-4455-b991-e6806febf4bb",
+			"resourceGroupName": "RGadf"
+		}
+	}
+}

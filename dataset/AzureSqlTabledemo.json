@@ -1,0 +1,124 @@
+{
+	"name": "AzureSqlTabledemo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaselinked",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "policyID",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "statecode",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "county",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "eq_site_limit",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "hu_site_limit",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "fl_site_limit",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "fr_site_limit",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "tiv_2011",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "tiv_2012",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "eq_site_deductible",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "hu_site_deductible",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "fl_site_deductible",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "fr_site_deductible",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "point_latitude",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "point_longitude",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "line",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "construction",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "point_granularity",
+				"type": "String",
+				"precision": 255,
+				"scale": 255
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[testsql]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

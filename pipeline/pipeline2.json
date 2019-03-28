@@ -1,0 +1,48 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopyDataJoni",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlobsource",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlobink",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"parameters": {
+			"Source_file_name": {
+				"type": "String",
+				"defaultValue": "emp.txt"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

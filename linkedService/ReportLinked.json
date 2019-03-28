@@ -1,0 +1,14 @@
+{
+	"name": "ReportLinked",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://login.microsoftonline.com",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "v-chjald@microsoft.com",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFERkFMS1VOQTEyM18wNGVkMWVhMS0yMGM5LTQ0MDAtOWFkMC1jMjg3OWI4ZmI4ZWUiDQp9"
+		}
+	}
+}

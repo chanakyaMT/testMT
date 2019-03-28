@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntimenetIRSep",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

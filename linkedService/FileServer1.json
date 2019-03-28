@@ -1,0 +1,12 @@
+{
+	"name": "FileServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "\\\\trailalkuna123.file.core.windows.net\\testfile",
+			"userId": "AZURE\\trailalkuna123",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFERkFMS1VOQTEyM19hMjM0MzM5ZS0yZTZiLTRkNDUtOThhYi1lOTIwOWVkYWU3MDYiDQp9"
+		}
+	}
+}

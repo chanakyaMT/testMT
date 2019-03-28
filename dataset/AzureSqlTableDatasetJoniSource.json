@@ -1,0 +1,23 @@
+{
+	"name": "AzureSqlTableDatasetJoniSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseJoniSource",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"DWTableName": {
+				"type": "String",
+				"defaultValue": "dasdasdasda"
+			}
+		},
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": {
+				"value": "@dataset().DWTableName",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

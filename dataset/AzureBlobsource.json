@@ -1,0 +1,15 @@
+{
+	"name": "AzureBlobsource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageSinkJoni",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "Postman-win64-6.6.1-Setup.exe",
+			"folderPath": "adftutorial"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

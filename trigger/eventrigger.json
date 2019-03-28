@@ -1,0 +1,23 @@
+{
+	"name": "eventrigger",
+	"properties": {
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyPipeline_n6m",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/emp/",
+			"blobPathEndsWith": ".txt",
+			"scope": "/subscriptions/93dbc954-90a1-459b-bc12-a781ae24970c/resourceGroups/ADFTutorialResourceGroup/providers/Microsoft.Storage/storageAccounts/trailalkuna123",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

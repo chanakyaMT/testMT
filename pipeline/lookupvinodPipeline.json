@@ -1,0 +1,71 @@
+{
+	"name": "lookupvinodPipeline",
+	"properties": {
+		"description": "This pipeline passes lookup output to next copy activity",
+		"activities": [
+			{
+				"name": "LookupVinod",
+				"type": "Lookup",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"dataset": {
+						"referenceName": "AzureBlob1",
+						"type": "DatasetReference"
+					}
+				}
+			},
+			{
+				"name": "CopyDataVinod",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "LookupVinod",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlobSinkJoniDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlobSink",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

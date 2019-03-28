@@ -1,8 +1,8 @@
 {
-	"name": "AzureBlobSink",
+	"name": "DestinationDataset_n6m",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorageSinkJoni",
+			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureBlob",
@@ -16,11 +16,8 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
-			"fileName": {
-				"value": "@{activity('LookupVinod').output.firstRow.Prop_0}",
-				"type": "Expression"
-			},
-			"folderPath": "adftutorial"
+			"fileName": "",
+			"folderPath": "emp"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

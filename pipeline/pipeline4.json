@@ -1,0 +1,26 @@
+{
+	"name": "pipeline4",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"url": "https://www.googleapis.com/blogger/v3/blogs/5635491698235194811/posts?key=AIzaSyADq5pS4n-jeKBoi79Cw55cYrk0ygMSddw",
+					"method": "GET",
+					"headers": {
+						"Content-Type": "application/json"
+					}
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

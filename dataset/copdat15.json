@@ -1,5 +1,5 @@
 {
-	"name": "AzureBlobSink",
+	"name": "copdat15",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorageSinkJoni",
@@ -16,10 +16,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
-			"fileName": {
-				"value": "@{activity('LookupVinod').output.firstRow.Prop_0}",
-				"type": "Expression"
-			},
+			"fileName": "201809",
 			"folderPath": "adftutorial"
 		}
 	},

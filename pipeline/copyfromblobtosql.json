@@ -1,0 +1,65 @@
+{
+	"name": "copyfromblobtosql",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copyfrom",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 3,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Prop_0": "policyID",
+							"Prop_1": "statecode",
+							"Prop_2": "county",
+							"Prop_3": "eq_site_limit",
+							"Prop_4": "hu_site_limit",
+							"Prop_5": "fl_site_limit",
+							"Prop_6": "fr_site_limit",
+							"Prop_7": "tiv_2011",
+							"Prop_8": "tiv_2012",
+							"Prop_9": "eq_site_deductible",
+							"Prop_10": "hu_site_deductible",
+							"Prop_11": "fl_site_deductible",
+							"Prop_12": "fr_site_deductible",
+							"Prop_13": "point_latitude",
+							"Prop_14": "point_longitude",
+							"Prop_15": "line",
+							"Prop_16": "construction",
+							"Prop_17": "point_granularity"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlobsqldemofile",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTabledemo",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

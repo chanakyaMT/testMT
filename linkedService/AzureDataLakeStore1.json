@@ -1,0 +1,22 @@
+{
+	"name": "AzureDataLakeStore1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://adlsgen1test.azuredatalakestore.net/webhdfs/v1",
+			"servicePrincipalId": "6044f0d4-b8bc-4324-bc64-9c12278fb336",
+			"servicePrincipalKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "adlsappkey"
+			},
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"subscriptionId": "93dbc954-90a1-459b-bc12-a781ae24970c",
+			"resourceGroupName": "MindtreeRG"
+		}
+	}
+}

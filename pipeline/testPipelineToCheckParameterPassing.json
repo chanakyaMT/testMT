@@ -1,0 +1,83 @@
+{
+	"name": "testPipelineToCheckParameterPassing",
+	"properties": {
+		"description": "This pipeline checked all possibilities to send previous pipeline status to next activity.\n\n@{activity('test1').output.errors[0].Code} -- for error code inside output.\n\nyou need to use proper index value to access json elements \n\n@{activity('test1').output.errors[0].Message}  -- for Message inside error of output.\n\n@{activity('test1').Error.message}  for just error message\n@{activity('test1').Error.errorCode} for passing error Code.\n@{activity('test1').Error}  everything inside error.\n ",
+		"activities": [
+			{
+				"name": "test1",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlobSinkJoniDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlobink",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "test2",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "test1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlob3",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlob4",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

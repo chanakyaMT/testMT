@@ -1,5 +1,5 @@
 {
-	"name": "AzureBlobSink",
+	"name": "AzureBlob2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorageSinkJoni",
@@ -16,11 +16,8 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
-			"fileName": {
-				"value": "@{activity('LookupVinod').output.firstRow.Prop_0}",
-				"type": "Expression"
-			},
-			"folderPath": "adftutorial"
+			"fileName": "",
+			"folderPath": "test"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

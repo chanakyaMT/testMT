@@ -1,5 +1,5 @@
 {
-	"name": "AzureBlobSink",
+	"name": "AzureBlob3",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorageSinkJoni",
@@ -16,10 +16,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
-			"fileName": {
-				"value": "@{activity('LookupVinod').output.firstRow.Prop_0}",
-				"type": "Expression"
-			},
+			"fileName": "10",
 			"folderPath": "adftutorial"
 		}
 	},

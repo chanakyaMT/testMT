@@ -1,0 +1,23 @@
+{
+	"name": "trigger7",
+	"properties": {
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyantonio",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 7,
+				"startTime": "2018-11-28T15:43:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

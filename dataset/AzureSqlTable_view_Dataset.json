@@ -1,13 +1,13 @@
 {
-	"name": "DocumentDbCollection1",
+	"name": "AzureSqlTable_view_Dataset",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "CosmosDb1",
+			"referenceName": "AzureSqlDatabaselinked",
 			"type": "LinkedServiceReference"
 		},
-		"type": "DocumentDbCollection",
+		"type": "AzureSqlTable",
 		"typeProperties": {
-			"collectionName": "test"
+			"tableName": "[dbo].[testview1]"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

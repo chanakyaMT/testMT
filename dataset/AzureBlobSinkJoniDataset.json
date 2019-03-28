@@ -1,8 +1,8 @@
 {
-	"name": "AzureBlobSink",
+	"name": "AzureBlobSinkJoniDataset",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorageSinkJoni",
+			"referenceName": "AzureBlobStorageSinkCopy",
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureBlob",
@@ -16,10 +16,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": false
 			},
-			"fileName": {
-				"value": "@{activity('LookupVinod').output.firstRow.Prop_0}",
-				"type": "Expression"
-			},
+			"fileName": "2018091",
 			"folderPath": "adftutorial"
 		}
 	},

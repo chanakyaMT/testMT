@@ -1,0 +1,34 @@
+{
+	"name": "trigger21",
+	"properties": {
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline5",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Week",
+				"interval": 1,
+				"startTime": "2019-03-07T12:34:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						36
+					],
+					"hours": [
+						12
+					],
+					"weekDays": [
+						"Friday"
+					]
+				}
+			}
+		}
+	}
+}
